@@ -81,10 +81,10 @@
 
         // Imágenes personalizables
         const playerImg = new Image();
-        playerImg.src = 'costro.png';  // Imagen del jugador
+        playerImg.src = 'player.png';  // Imagen del jugador
 
         const enemyImg = new Image();
-        enemyImg.src = 'costi.png';  // Imagen del enemigo
+        enemyImg.src = 'enemy.png';  // Imagen del enemigo
 
         const player = {
             x: mouseX,
@@ -95,11 +95,11 @@
 
         function createEnemy() {
             return {
-                x: Math.random() * (canvas.width - 40),
+                x: Math.random() * (canvas.width - 70),
                 y: Math.random() * 100,
-                width: 40,
-                height: 40,
-                dy: 1 + level * 0.8  // Velocidad progresiva
+                width: 70,
+                height: 70,
+                dy: 0.5 + level * 0.4  // Velocidad más baja pero progresiva
             };
         }
 
